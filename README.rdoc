@@ -32,6 +32,13 @@ And follow the instructions of Simplecov[https://github.com/colszowka/simplecov]
   end
    SimpleCov.formatter = SimpleCov::Formatter::MergedFormatter
 
+== Running metric_fu/metrical
+Be sure that you configured simplecov and simplecov-rcov-text.
+Run your test framework, example:
+ rspec spec
+
+Before that you can run the metric_fu/metrical command.
+
 -----
 = Example of generated file
  metric_fu shift the first line
