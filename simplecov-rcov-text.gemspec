@@ -7,10 +7,14 @@ Gem::Specification.new do |s|
   s.version     = SimpleCov::Formatter::RcovTextFormatter::VERSION
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["William 'Kina'"]
-  s.email       = [""]
-  s.homepage    = ""
-  s.summary     = %q{Just a Simplecov Formatter to cheat metric_fu}
-  s.description = %q{Just a Simplecov Formatter to cheat metric_fu}
+  s.email       = ["thekina@gmail.com"]
+  s.homepage    = "https://github.com/kina/simplecov-rcov-text"
+  s.summary     = %q{A Simplecov Formatter}
+  s.description = %q{Just a Simplecov Formatter to cheat metric_fu.
+    Generate a rcov.txt file.}
+  s.extra_rdoc_files = [
+      "README.rdoc"
+    ]
 
   s.rubyforge_project = "simplecov-rcov-text"
 
