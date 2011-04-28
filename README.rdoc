@@ -34,11 +34,12 @@ And follow the instructions of Simplecov[https://github.com/colszowka/simplecov]
 
 == Running metric_fu/metrical
 Be sure that you configured simplecov and simplecov-rcov-text.
+
 Run your test framework, example:
  rspec spec
 
-Before that you can run the metric_fu/metrical command.
-
+After that you can run the metric_fu/metrical command.
+<b>Don't forget to configure .metrics file!</b>
 -----
 = Example of generated file
  metric_fu shift the first line
