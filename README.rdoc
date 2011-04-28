@@ -6,7 +6,7 @@ The target of this formatter is to cheat on *metric_fu* so it's possible to use 
 = Usage
 Add the gem to the Gemfile preferably in the group test:
   gem 'simplecov', :require => false
-  gem 'simplecov-rcov', :require => false
+  gem 'simplecov-rcov-text', :require => false
 
 Create a .metrics file in the root of project with the code:
 	MetricFu::Configuration.run do |config|
