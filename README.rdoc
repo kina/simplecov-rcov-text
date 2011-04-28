@@ -2,8 +2,11 @@
 
 The target of this formatter is to cheat on *metric_fu* so it's possible to use simplecov instead rcov.
 
+= Install
+gem install simplecov-rcov-text
 
 = Usage
+
 Add the gem to the Gemfile preferably in the group test:
   gem 'simplecov', :require => false
   gem 'simplecov-rcov-text', :require => false
@@ -39,16 +42,17 @@ Run your test framework, example:
  rspec spec
 
 After that you can run the metric_fu/metrical command.
+
 <b>Don't forget to configure .metrics file!</b>
 -----
 = Example of generated file
- metric_fu shift the first line
-   class SomeClass
-     def method_1
-       1+1
+  metric_fu shift the first line
+     class SomeClass
+       def method_1
+         1+1
+       end
+     
+       def method_2 ( value )
+  !!     value * value
+       end
      end
- 
-     def method_2 ( value )
- !!    value * value
-     end
-   end
