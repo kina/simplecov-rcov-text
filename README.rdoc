@@ -1,0 +1,46 @@
+= Simplecov Rcov Formatter Text
+
+The target of this formatter is to cheat on *metric_fu* so it's possible to use simplecov instead rcov.
+
+
+= Usage
+Add the gem to the Gemfile preferably in the group test:
+  gem 'simplecov', :require => false
+  gem 'simplecov-rcov', :require => false
+
+Create a .metrics file in the root of project with the code:
+	MetricFu::Configuration.run do |config|
+	  config.rcov[:external] = 'coverage/rcov/rcov.txt'
+	end
+
+
+And follow the instructions of Simplecov[https://github.com/colszowka/simplecov] and metric_fu[https://github.com/jscruggs/metric_fu] or metrical[https://github.com/iain/metrical].
+
+== Simplest way
+  require 'simplecov'
+  require 'simplecov-rcov-text'
+  SimpleCov.formatter = SimpleCov::Formatter::RcovTextFormatter
+
+== Using with HTML Format
+  require 'simplecov'
+  require 'simplecov-rcov-text'
+  class SimpleCov::Formatter::MergedFormatter
+    def format(result)
+       SimpleCov::Formatter::HTMLFormatter.new.format(result)
+       SimpleCov::Formatter::RcovTextFormatter.new.format(result)
+    end
+  end
+   SimpleCov.formatter = SimpleCov::Formatter::MergedFormatter
+
+-----
+= Example of generated file
+ metric_fu shift the first line
+   class SomeClass
+     def method_1
+       1+1
+     end
+ 
+     def method_2 ( value )
+ !!    value * value
+     end
+   end
