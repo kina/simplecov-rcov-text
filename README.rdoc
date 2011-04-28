@@ -12,9 +12,9 @@ Add the gem to the Gemfile preferably in the group test:
   gem 'simplecov-rcov-text', :require => false
 
 Create a .metrics file in the root of project with the code:
-	MetricFu::Configuration.run do |config|
-	  config.rcov[:external] = 'coverage/rcov/rcov.txt'
-	end
+  MetricFu::Configuration.run do |config|
+    config.rcov[:external] = 'coverage/rcov/rcov.txt'
+  end
 
 
 And follow the instructions of Simplecov[https://github.com/colszowka/simplecov] and metric_fu[https://github.com/jscruggs/metric_fu] or metrical[https://github.com/iain/metrical].
@@ -33,7 +33,7 @@ And follow the instructions of Simplecov[https://github.com/colszowka/simplecov]
        SimpleCov::Formatter::RcovTextFormatter.new.format(result)
     end
   end
-   SimpleCov.formatter = SimpleCov::Formatter::MergedFormatter
+  SimpleCov.formatter = SimpleCov::Formatter::MergedFormatter
 
 == Running metric_fu/metrical
 Be sure that you configured simplecov and simplecov-rcov-text.
@@ -51,7 +51,7 @@ After that you can run the metric_fu/metrical command.
        def method_1
          1+1
        end
-     
+
        def method_2 ( value )
   !!     value * value
        end

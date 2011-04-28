@@ -8,7 +8,6 @@ unless defined?(SimpleCov)
   raise RuntimeError, "simplecov-rcov-text is a formatter for simplecov. Please update your test helper and gemfile to require 'simplecov'!"
 end
 
-
 class SimpleCov::Formatter::RcovTextFormatter
   def format( result )
     FileUtils.mkdir_p(SimpleCov::Formatter::RcovTextFormatter.output_path)
@@ -17,7 +16,7 @@ class SimpleCov::Formatter::RcovTextFormatter
       rcov << create_content(result)
     end
   end
-  
+
   def create_content(result)
     content = "metric_fu shift the first line\n"
     result.source_files.each do |source_file|
@@ -33,15 +32,15 @@ class SimpleCov::Formatter::RcovTextFormatter
     end
     content
   end
-  
+
   def simple_file_name(source_file)
     source_file.filename.gsub(SimpleCov.root, '.')
   end
-  
+
   def self.file_name
     "rcov.txt"
   end
-  
+
   def self.output_path
     File.join( SimpleCov.coverage_path, "/rcov" )
   end
