@@ -1,12 +1,20 @@
 GEM
   remote: http://rubygems.org/
   specs:
-    simplecov (0.4.2)
-      simplecov-html (~> 0.4.4)
-    simplecov-html (0.4.4)
+    docile (1.1.0)
+    minitest (5.0.8)
+    multi_json (1.8.2)
+    rake (10.1.0)
+    simplecov (0.8.2)
+      docile (~> 1.1.0)
+      multi_json
+      simplecov-html (~> 0.8.0)
+    simplecov-html (0.8.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  minitest
+  rake
   simplecov
