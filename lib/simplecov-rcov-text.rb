@@ -12,7 +12,7 @@ class SimpleCov::Formatter::RcovTextFormatter
   def format( result )
     FileUtils.mkdir_p(SimpleCov::Formatter::RcovTextFormatter.output_path)
 
-    File.open(File.join(SimpleCov::Formatter::RcovTextFormatter.output_path, SimpleCov::Formatter::RcovTextFormatter.file_name), "w+") do |rcov|
+    File.open(File.join(SimpleCov::Formatter::RcovTextFormatter.output_path, SimpleCov::Formatter::RcovTextFormatter.file_name), "wb+") do |rcov|
       rcov << create_content(result)
     end
   end
