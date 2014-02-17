@@ -8,10 +8,11 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["William 'Kina'"]
   s.email       = ["thekina@gmail.com"]
-  s.homepage    = "https://github.com/kina/simplecov-rcov-text"
+  s.homepage    = SimpleCov::Formatter::RcovTextFormatter::UPSTREAM_URL
   s.summary     = %q{A Simplecov Formatter}
   s.description = %q{Just a Simplecov Formatter to cheat metric_fu.
     Generate a rcov.txt file.}
+  s.license = 'MIT'
   s.extra_rdoc_files = [
       "README.rdoc"
     ]
