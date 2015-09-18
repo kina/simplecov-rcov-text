@@ -1,5 +1,3 @@
-require 'bundler'
-Bundler.setup(:default)
 require 'cgi'
 require 'fileutils'
 require 'time'
